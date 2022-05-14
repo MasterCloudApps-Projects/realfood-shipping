@@ -1,0 +1,13 @@
+@startuml
+top to bottom direction
+
+application.trackshipment.TrackShipment ..> application.trackshipment.TrackShipmentRequest
+application.trackshipment.TrackShipment ..> application.trackshipment.TrackShipmentResponse
+application.trackshipment.TrackShipment ..> domain.exceptions.ShipmentNotFoundException
+application.trackshipment.TrackShipment --> domain.ShipmentRepository
+application.trackshipment.TrackShipment --> domain.Shipment
+application.trackshipment.TrackShipment --> domain.ShipmentStatus
+infrastructure.data.PostgresShipmentRepository ..|> domain.ShipmentRepository
+infrastructure.data.PostgresShipmentRepository --> infrastructure.data.JpaShipmentRepository
+
+@enduml

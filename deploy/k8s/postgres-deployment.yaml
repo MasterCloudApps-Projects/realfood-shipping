@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: realfood-shipping-postgres
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: realfood-shipping-postgres
+  template:
+    metadata:
+      labels:
+        app: realfood-shipping-postgres
+    spec:
+      containers:
+        - env:
+            - name: POSTGRES_DB
+              value: realfood-shipping
+            - name: POSTGRES_PASSWORD
+              value: root
+            - name: POSTGRES_USER
+              value: root
+          image: postgres
+          imagePullPolicy: IfNotPresent
+          name: realfood-shipping-postgres
+          ports:
+            - containerPort: 5432
+      restartPolicy: Always
+      volumes:
+        - name: realfood-shipping-postgres-persistent-storage
+          persistentVolumeClaim:
+            claimName: realfood-shipping-postgres-pv-claim

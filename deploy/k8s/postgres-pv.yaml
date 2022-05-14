@@ -1,0 +1,12 @@
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: realfood-shipping-postgres-pv
+spec:
+  storageClassName: realfood-shipping-postgres-sc
+  accessModes:
+    - ReadWriteOnce
+  capacity:
+    storage: 1Gi
+  hostPath:
+    path: /realfood-shipping-postgres-data

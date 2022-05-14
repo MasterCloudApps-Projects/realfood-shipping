@@ -1,0 +1,31 @@
+version: "3"
+services:
+  realfood-shipping-app:
+    container_name: realfood-shipping-app
+    image: cloudappsteam/es.urjc.realfood.shipping:0.0.1
+    environment:
+      - DATABASE_HOST=realfood-shipping-postgres
+      - DATABASE_PORT=5432
+      - DATABASE_DB=realfood-shipping
+    ports:
+      - "8080:8081"
+  realfood-shipping-postgres:
+    container_name: realfood-shipping-postgres
+    image: postgres
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=realfood-clients
+    expose:
+      - "5432"
+    volumes:
+      - ./docker/postgres:/var/lib/postgresql/data
+  realfood-rabbitmq:
+    container_name: realfood-rabbitmq
+    image: rabbitmq:3.8.14-management-alpine
+    environment:
+      - RABBITMQ_DEFAULT_USER=guest
+      - RABBITMQ_DEFAULT_PASS=guest
+    expose:
+      - "5672"
+      - "15672"
