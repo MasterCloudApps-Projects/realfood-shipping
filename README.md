@@ -52,7 +52,7 @@ Shipment o--> Order
 ```
 
 Ejemplo de diagrama de clases para el caso de uso Track Shipment:
-![use-case-diagram](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://github.com/MasterCloudApps-Projects/realfood-shipping/docs/track-shipment-usecase.puml)
+![use-case-diagram](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/MasterCloudApps-Projects/realfood-shipping/main/docs/track-shipment-usecase.puml)
 
 ## Despliegue
 
