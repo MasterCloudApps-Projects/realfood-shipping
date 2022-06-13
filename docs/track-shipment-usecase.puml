@@ -1,6 +1,7 @@
 @startuml
 top to bottom direction
 
+interface domain.ShipmentRepository
 application.trackshipment.TrackShipment ..> application.trackshipment.TrackShipmentRequest
 application.trackshipment.TrackShipment ..> application.trackshipment.TrackShipmentResponse
 application.trackshipment.TrackShipment ..> domain.exceptions.ShipmentNotFoundException
