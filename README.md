@@ -64,7 +64,7 @@ Ejemplo de diagrama de clases para el caso de uso Track Shipment:
 $ docker-compose -f deploy/docker-compose.yml up --build
 ```
 
-- Despliegue completo (Recursos y servicio de clientes)
+- Despliegue completo (Recursos y servicio de shipping)
 
 ```
 $ docker-compose -f deploy/docker-compose-prod.yml up --build
@@ -80,7 +80,7 @@ Software recomendado: [Docker desktop](https://www.docker.com/) / [Rancher deskt
 
 ### Kubernetes
 
-En la carpeta de realfood-deployment están los manifiestos para desplegar los recursos y el servicio
+En la carpeta de /deploy están los manifiestos para desplegar los recursos y el servicio
 
 - Arrancar el servicio de minikube
 
