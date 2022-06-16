@@ -11,7 +11,7 @@
   </parent>
   <groupId>es.urjc.realfood</groupId>
   <artifactId>shipping</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <name>realfood-shipping</name>
   <description>realfood-shipping</description>
   <properties>

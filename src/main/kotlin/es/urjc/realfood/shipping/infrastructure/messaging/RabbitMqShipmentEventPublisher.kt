@@ -15,7 +15,7 @@ class RabbitMqShipmentEventPublisher(
     private val objectMapper = ObjectMapper()
         .findAndRegisterModules()
 
-    private val exchange: String = "shipping-exchange"
+    private val exchange: String = "sent-orders"
 
     override fun publish(event: DomainEvent) {
         val msg: String = objectMapper.writeValueAsString(event)

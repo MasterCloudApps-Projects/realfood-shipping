@@ -12,11 +12,7 @@ class RabbitConfig(private val amqpAdmin: AmqpAdmin) {
 
     @PostConstruct
     fun setup() {
-        amqpAdmin.declareExchange(
-            ExchangeBuilder
-                .fanoutExchange("shipping-exchange")
-                .durable(true)
-                .build()
-        )
+        amqpAdmin.declareQueue(Queue("send-order"))
+        amqpAdmin.declareQueue(Queue("sent-orders"))
     }
 }
