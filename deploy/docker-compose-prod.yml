@@ -2,7 +2,7 @@ version: "3"
 services:
   realfood-shipping-app:
     container_name: realfood-shipping-app
-    image: cloudappsteam/es.urjc.realfood.shipping:0.0.1
+    image: cloudappsteam/es.urjc.realfood.shipping:1.3.0
     environment:
       - DATABASE_HOST=realfood-shipping-postgres
       - DATABASE_PORT=5432
